@@ -16,6 +16,12 @@ export default function Login() {
         });
         const result = await res.json();
         setMessage(result.message || result.error);
+
+        // Clear input fields if login is successful
+        if (res.ok) {
+            setUsername('');  // Clear username
+            setPassword('');  // Clear password
+        }
     };
 
     return (
@@ -23,9 +29,19 @@ export default function Login() {
             <form onSubmit={handleSubmit} className={styles['auth-form']}>
                 <h1>Login</h1>
                 <label>Username</label>
-                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
+                <input 
+                    type="text" 
+                    value={username} 
+                    onChange={(e) => setUsername(e.target.value)} 
+                    required 
+                />
                 <label>Password</label>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <input 
+                    type="password" 
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    required 
+                />
                 <button type="submit">Login</button>
                 {message && <p>{message}</p>}
             </form>
