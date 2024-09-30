@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# User Authentication System
 
-## Getting Started
+## Description
+The **User Authentication System** is a secure platform that allows users to register, log in, and reset their passwords. The system implements strong password encryption using hashing algorithms to ensure user data security. It also includes a **forgot password** feature with email verification, where a verification code is sent to the user’s registered email for password resetting.
 
-First, run the development server:
+## Features
+- 🔐 Secure user registration with **hashed passwords**.
+- 🔑 User login authentication system with **validation checks**.
+- 📧 **Forgot password** functionality with email verification.
+- 🔄 Password reset using a **verification code** sent to the registered email.
+- 🧹 Clears input fields after successful registration or login.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To set up this project locally:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bash
+# Clone the repository
+git clone https://github.com/omshete96/User-Authentication-System.git
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Navigate to the project directory
+cd User-Authentication-System
 
-## Learn More
+# Install dependencies (if applicable)
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run the project (for web-based projects using Node.js/Next.js)
+npm start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Usage
+User Registration:
+Users can register by providing their email and a password.
+Passwords are hashed before being stored in the database for security.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Login:
 
-## Deploy on Vercel
+Users can log in by providing their email and password.
+The system validates the login credentials using hashed password comparison.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Forgot Password:
+Users can request a password reset, where a verification code is sent to their registered email.
+After entering the verification code, they can set a new password.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Technologies
+Backend: Node.js, Next.js
+Database: MySQL
+Security: Password hashing (bcrypt or similar)
+Email Service: Nodemailer (or any other email-sending service for the verification feature)
