@@ -5,46 +5,96 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #000000; /* Modern black background */
+    color: #ffffff; /* White text for contrast */
 }
 
 .auth-form {
-    background-color: white;
+    background-color: #1a1a1a; /* Dark gray background for the form */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    width: 300px;
+    text-align: center;
 }
 
 .auth-form h1 {
+    margin-bottom: 1rem;
+    color: #ffffff; /* White heading */
+}
+
+.auth-form p {
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #cccccc; /* Light gray for the paragraph */
 }
 
 .auth-form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #ffffff; /* White for labels */
 }
 
-.auth-form input {
+.auth-form .input-field {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Darker gray border */
     border-radius: 5px;
+    background-color: #333; /* Dark background for input fields */
+    color: #ffffff; /* White text in input fields */
+    transition: border-color 0.3s;
 }
 
-.auth-form button {
+.auth-form .input-field:focus {
+    border-color: #ffffff; /* White border on focus */
+    outline: none;
+}
+
+.auth-form .submit-button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #0070f3;
-    color: white;
+    background-color: #ffffff; /* White button */
+    color: #000; /* Black text on button */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.auth-form button:hover {
-    background-color: #005bb5;
+.auth-form .submit-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    color: #000; /* Keep black text on hover */
+}
+
+.auth-form .message {
+    margin-top: 1rem;
+    color: #d9534f; /* Bootstrap danger color */
+}
+
+.auth-form .footer-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #cccccc; /* Light gray for footer text */
+}
+
+.auth-form .footer-text a {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+}
+
+.auth-form .footer-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Success and error message styles */
+.success-message {
+    margin-top: 1rem;
+    color: #28a745; /* Green color for success messages */
+}
+
+.error-message {
+    margin-top: 1rem;
+    color: #dc3545; /* Red color for error messages */
 }
