@@ -10,23 +10,6 @@ The **User Authentication System** is a secure platform that allows users to reg
 - 🔄 Password reset using a **verification code** sent to the registered email.
 - 🧹 Clears input fields after successful registration or login.
 
-## Installation
-
-To set up this project locally:
-
-bash
-# Clone the repository
-git clone https://github.com/omshete96/User-Authentication-System.git
-
-# Navigate to the project directory
-cd User-Authentication-System
-
-# Install dependencies (if applicable)
-npm install
-
-# Run the project (for web-based projects using Node.js/Next.js)
-npm start
-
 Usage
 User Registration:
 Users can register by providing their email and a password.
@@ -45,4 +28,3 @@ Technologies
 Backend: Node.js, Next.js
 Database: MySQL
 Security: Password hashing (bcrypt or similar)
-Email Service: Nodemailer (or any other email-sending service for the verification feature)
